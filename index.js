@@ -1,14 +1,8 @@
-var DashButton = require('dash-button');
-
-const DASH_BUTTON_MAC_ADDRESS = 'A0:63:91:D6:82:33';
-let button = new DashButton(DASH_BUTTON_MAC_ADDRESS);
-
-var subscription = button.addListener(function(){
-	process.stdout.write("hello: ");
-
-});//do stuff
-
-//subscription.remove();
-
+var dash_button = require('node-dash-button');
+var dash = dash_button("A0:63:91:D6:82:33"); //address from step above
+dash.on("detected", function (){
+debugger;
+    console.log("omg found");
+});
 
 
