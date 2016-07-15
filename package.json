@@ -18,6 +18,7 @@
     "prepublish": "gulp clean && gulp build",
     "test": "jest",
     "watch": "gulp watch"
+    "scan": "dash-button scan"
   },
   "jest": {
     "moduleFileExtensions": [
