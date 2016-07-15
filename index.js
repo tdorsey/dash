@@ -1,15 +1,17 @@
-import DashButton from 'dash-button';
 
-const DASH_BUTTON_MAC_ADDRESS = 'xx:xx:xx:xx:xx:xx';
+var dash_button  = require('dash-button');
 
-let button = new DashButton(DASH_BUTTON_MAC_ADDRESS);
-Running Code When You Press Your Dash Button
+//import DashButton from 'dash-button';
 
-Add a listener to your button. The listener will run when you press the button.
+const DASH_BUTTON_MAC_ADDRESS = 'A0:63:91:D6:82:33';
 
-let subscription = button.addListener(async () => {
-//do stuff
+var button = new dash_button.DashButton(DASH_BUTTON_MAC_ADDRESS);
+
+//let button = new DashButton(DASH_BUTTON_MAC_ADDRESS);
+debugger;
+
+var subscription = button.addListener(async () => {
+alert("hi");//do stuff
 });
 
-// Later, if you want to remove the listener do so with the subscription:
 subscription.remove();
